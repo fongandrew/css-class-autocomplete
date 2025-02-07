@@ -6,19 +6,7 @@
 		{
 			"type": "npm",
 			"script": "watch",
-			"problemMatcher": {
-				"pattern": {
-					"regexp": "^.*$",
-					"file": 1,
-					"location": 2,
-					"message": 3
-				},
-				"background": {
-					"activeOnStart": true,
-					"beginsPattern": ".*watching.*",
-					"endsPattern": ".*watching.*"
-				}
-			},
+			"problemMatcher": "$esbuild-watch",
 			"isBackground": true,
 			"presentation": {
 				"reveal": "never"
