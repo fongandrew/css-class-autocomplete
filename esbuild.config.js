@@ -28,7 +28,14 @@ const OUT_DIR = 'out';
 
 const baseConfig = {
 	bundle: true,
-	external: ['vscode'],
+	external: [
+		'vscode',
+		'mocha',
+		'./reporters/*',
+		'./reporters/parallel-buffered',
+		'node:test',
+		'node:test/reporters'
+	],
 	format: 'cjs',
 	platform: 'node',
 	sourcemap: true,
