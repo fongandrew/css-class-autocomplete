@@ -41,6 +41,7 @@ export default tseslint.config(
 					varsIgnorePattern: '^_',
 				},
 			],
+			'@typescript-eslint/no-explicit-any': 'off',
 			// Ban exclusive tests like it.only
 			'mocha/no-exclusive-tests': 'error'
 		}
