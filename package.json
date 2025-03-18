@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/fongandrew/css-class-autocomplete.git"
   },
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -83,8 +83,8 @@
     "@typescript-eslint/parser": "^8.17.0",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
-    "@vscode/vsce": "^3.2.2",
-    "esbuild": "^0.24.2",
+    "@vscode/vsce": "^3.3.0",
+    "esbuild": "^0.25.1",
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-mocha": "^10.5.0",
