@@ -17,6 +17,7 @@
     "onLanguage:javascriptreact",
     "onLanguage:typescriptreact"
   ],
+  "icon": "./icon.png",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [],
