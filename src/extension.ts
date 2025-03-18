@@ -165,7 +165,7 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	}
 
-	const triggerChars = ['"', "'", ' '];
+	const triggerChars = ['"', "'", ' ', '-', '_'];
 
 	// Setup initial providers
 	setupProviders(context, triggerChars);
@@ -205,12 +205,23 @@ export class CssClassCompletionProvider implements vscode.CompletionItemProvider
 			return;
 		}
 
+		// Get all class names
+		const allClasses = this.cssClassExtractor.items();
+
 		// Convert extractor classes to completion item form
-		return Array.from(this.cssClassExtractor.items()).map((className) => {
+		return allClasses.map((className) => {
 			const item = new vscode.CompletionItem(className, vscode.CompletionItemKind.Value);
 			item.detail = 'CSS class';
-			// If we're in a space-separated list of classes, don't add quotes
-			item.insertText = className;
+
+			// Set filter text to enable VSCode's native filtering
+			item.filterText = className;
+
+			// For word replacement - this will be used when triggered with - or _
+			const wordRange = document.getWordRangeAtPosition(position, /[\w_-]+/);
+			if (wordRange) {
+				item.range = wordRange;
+			}
+
 			return item;
 		});
 	}
