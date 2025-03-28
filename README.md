@@ -4,10 +4,12 @@ This is a Visual Studio Code extension that provides autocompletion for CSS clas
 
 ## Installation
 
-The extension is currently WIP and not released on VS Code marketplace. You can install manually though:
+Install from https://marketplace.visualstudio.com/items?itemName=fongandrew.css-class-autocomplete
+
+Or install manually:
 
 - Download VSIX file from https://github.com/fongandrew/css-class-autocomplete/releases
-- Select `Install from VSIX` from the VS Code command palette. 
+- Select `Install from VSIX` from the VS Code command palette.
 
 ## How It Works
 
